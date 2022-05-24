@@ -32,9 +32,9 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         try {
 
-                            InfluxDB influxDB = InfluxDBFactory.connect("http://172.16.34.24:8086", "admin", "admin");
+                            InfluxDB influxDB = InfluxDBFactory.connect("http://172.16.34.47:8086", "admin", "admin");
                             influxDB.setLogLevel(InfluxDB.LogLevel.NONE);
-                            influxDB.setDatabase("test");
+                            influxDB.setDatabase("DEMO");
                             if (influxDB != null) {
                                 String sql = "SELECT value FROM \"random_number\" ORDER BY time desc LIMIT 1";
 
